@@ -1,0 +1,32 @@
+//LOGIN FORM
+let loginForm = document.querySelector(".login-form"),
+  loginOpen = document.querySelector("#login-btn"),
+  loginClose = document.querySelector("#close-login-form"),
+  header = document.querySelector(".header");
+
+loginOpen.addEventListener("click", () => {
+  loginForm.classList.add("active");
+});
+
+loginClose.addEventListener("click", () => {
+  loginForm.classList.remove("active");
+});
+
+window.addEventListener("scroll", () => {
+  loginForm.classList.remove("active");
+  navbar.classList.remove("active");
+
+  if (window.scrollY > 0) {
+    header.classList.add("active");
+  } else {
+    header.classList.remove("active");
+  }
+});
+
+//MENU RESPONSIVE
+let menu = document.querySelector("#menu-btn"),
+  navbar = document.querySelector(".header .nav");
+
+menu.addEventListener("click", () => {
+  navbar.classList.toggle("active");
+});
